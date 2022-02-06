@@ -1,5 +1,3 @@
-" === my vim config === “
-
 " === basic === "
 set nocompatible
 filetype on
@@ -65,6 +63,7 @@ map se :+tabnext<CR>
 map sv <C-w>t<C-w>H
 map sn <C-w>t<C-w>K
 
+
 " === plug install === "
 call plug#begin('~/.vim/plugged')
 
@@ -74,6 +73,7 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 call plug#end()
 
@@ -107,4 +107,5 @@ let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 let g:NERDTreeSyntaxEnabledExtensions = ['hbs', 'lhs'] " enable highlight to .hbs and .lhs files with default colors
 let g:NERDTreeSyntaxEnabledExactMatches = ['dropbox', 'node_modules', 'favicon.ico'] " enable highlight for dropbox and node_modules folders, and favicon.ico files with default colors
 
-
+" markdown preview "
+nnoremap mr :MarkdownPreviewToggle<CR>
