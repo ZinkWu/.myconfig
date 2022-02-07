@@ -1,13 +1,10 @@
 各种配置文件 & 记录
 
-vim:
+Vim:
 - [ ] code completion 
-- [ ] spell check 
-- [ ] markdown
-- [x]	NERDTree
-- [ ] markdown-table
-- [ ] code highlight
+- [x] markdown
+- [x]	NERD Tree
 - [ ] Goyo
-- [ ] Undotree
+- [x] Undo tree
 
 oh-my-zsh

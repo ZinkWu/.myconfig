@@ -1,4 +1,3 @@
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -112,7 +111,7 @@ export PATH=~/.npm-global/bin:$PATH
 windows_ip=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
 sed -i '/socks5/d' $HOME/.proxychains/proxychains.conf
 # '$windows_ip' 1080' 请将 1080 改为你自己的代理端口
-sed -i '$a socks5 '$windows_ip' 3660' $HOME/.proxychains/proxychains.conf
+sed -i '$a socks5 '$windows_ip' 1080' $HOME/.proxychains/proxychains.conf
 
 # alias
 alias ss='proxychains'
@@ -120,3 +119,7 @@ alias c='clear'
 
 # VIMRC PATH
 export MYVIMRC=~/.vim/vimrc
+
+# quick start server on pyhton
+quick_start_serve_py_fun(){python3 -m http.server $@};
+alias pyserver='python3 -m http.server $1'
